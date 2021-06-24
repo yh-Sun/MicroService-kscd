@@ -16,6 +16,7 @@
         <module>design-pattern</module>
         <!--力扣-->
         <module>leetcode</module>
+        <module>study-thread</module>
     </modules>
     
     <properties>
