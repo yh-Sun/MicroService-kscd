@@ -1,6 +1,5 @@
 package com.sun.leetcode.tow_sum;
 
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +15,7 @@ import java.util.Map;
  * @since   1.0
  */
 public class Solution {
+    
     public static void main(String[] args) {
         int[] nums = {2, 11, 7, 15};
         int[] i = new Solution().twoSum(nums, 18);
