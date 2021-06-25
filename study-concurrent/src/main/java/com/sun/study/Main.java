@@ -1,4 +1,4 @@
-package com.sun.study.thread;
+package com.sun.study;
 
 public class Main {
     
