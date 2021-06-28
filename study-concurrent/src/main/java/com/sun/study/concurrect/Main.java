@@ -54,7 +54,7 @@ public class Main {
         MyCallable callable = new MyCallable();
         Future<String> future = pool.submit(callable);
         System.out.println("接收回调-----" + future.get());
-        
+        // 关闭线程池
         pool.shutdown();
     }
     
