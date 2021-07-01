@@ -11,6 +11,7 @@
 1. 增加design-pattern：设计模式官方demo
 2. 增加leetcode：力扣习题项目
 3. 增加study-concurrent：并发编程demo
+4. 增加spring-boot-mongodb：mybatis-plus + mongodb简易的整合demo
 
 </details>
 

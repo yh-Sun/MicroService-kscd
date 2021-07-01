@@ -26,7 +26,7 @@ public class CountDownLatchDemo {
         }
 
         System.out.println("等待所有面试者到达");
-        latch.await();
+//        latch.await();
         System.out.println("所有面试者都已经到达");
     }
     
