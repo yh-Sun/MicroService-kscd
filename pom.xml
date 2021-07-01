@@ -18,6 +18,8 @@
         <module>leetcode</module>
         <!--学习：并发-->
         <module>study-concurrent</module>
+        <!--spring boot + mybatis plus + mongodb-->
+        <module>spring-boot-mongodb</module>
     </modules>
     
     <properties>
