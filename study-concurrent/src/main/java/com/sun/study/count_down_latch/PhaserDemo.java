@@ -16,11 +16,11 @@ import java.util.concurrent.Phaser;
  * @since   1.0
  */
 public class PhaserDemo {
-    
+
     public static void main(String[] args) {
         new PhaserDemo().starter();
     }
-    
+
     public void starter() {
         Phaser phaser = new Phaser(5) {
             @Override
@@ -35,6 +35,13 @@ public class PhaserDemo {
         }
 
         while (true) {
+            if(0 == phaser.getRegisteredParties()) {
+                System.out.println("执行完了");
+                break;
+            }
+        }
+
+        while (true) {
             if(2 == phaser.getPhase()) {
                 // 加三
                 System.out.println("经理外甥女要参加面试");
@@ -43,20 +50,20 @@ public class PhaserDemo {
                 return;
             }
         }
-        
+
     }
-    
-    
+
+
     class MyRunnable implements Runnable {
-        
+
         private Phaser phaser;
-        
+
         private Random random = new Random();
 
         public MyRunnable(Phaser phaser) {
             this.phaser = phaser;
         }
-        
+
 
         @SneakyThrows
         @Override
@@ -72,7 +79,7 @@ public class PhaserDemo {
             System.out.println(Thread.currentThread().getName() + "笔试答题结束，交卷");
             // 等待所有面试者交卷后，开始面试
             phaser.arriveAndAwaitAdvance();
-            
+
             // 随机数：模拟是否有90分
             if(random.nextBoolean()) {
                 // // 少于90分的 pass掉
@@ -105,5 +112,5 @@ public class PhaserDemo {
             phaser.arriveAndAwaitAdvance();
         }
     }
-    
+
 }
