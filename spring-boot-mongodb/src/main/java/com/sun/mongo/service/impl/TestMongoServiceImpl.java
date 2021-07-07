@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class TestMongoServiceImpl implements TestMongoService {
-    
+
     private final MongoTemplate mongoTemplate;
 
     public TestMongoServiceImpl(MongoTemplate mongoTemplate) {
@@ -20,10 +20,15 @@ public class TestMongoServiceImpl implements TestMongoService {
     public void save(TestMongo mongo) {
         mongoTemplate.save(mongo);
     }
-    
+
     @Override
     public List<TestMongo> findAll() {
         return mongoTemplate.findAll(TestMongo.class);
     }
-    
+
+    @Override
+    public TestMongo findById(String id) {
+        return mongoTemplate.findById(id, TestMongo.class);
+    }
+
 }
