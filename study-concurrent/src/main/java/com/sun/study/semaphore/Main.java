@@ -29,7 +29,7 @@ public class Main {
         // 创建计数器，设定所有子线程执行完毕后，打印count
         CountDownLatch latch = new CountDownLatch(10000);
 
-        // 创建可重入锁
+        // 创建信号量
         Semaphore semaphore = new Semaphore(1);
 
         Main main = new Main();
