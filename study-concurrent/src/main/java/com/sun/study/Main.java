@@ -1,13 +1,16 @@
 package com.sun.study;
 
-import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUtil;
+import java.util.Optional;
 
 public class Main {
 
     public static void main(String[] args) {
-        DateTime parse = DateUtil.parse("2021-04-22 12:30:23");
-        System.out.println(parse);
+        final String s = "1";
+        Optional<String> byPolicyNoOpt = Optional.of("1");
+        byPolicyNoOpt.ifPresent(policyMain -> {
+            System.out.println("111");
+            // int i = 1 / 0;
+        });
     }
 
 }

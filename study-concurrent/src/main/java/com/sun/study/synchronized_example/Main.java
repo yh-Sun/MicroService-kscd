@@ -1,4 +1,4 @@
-package com.sun.study.synchronized_test;
+package com.sun.study.synchronized_example;
 
 import lombok.SneakyThrows;
 

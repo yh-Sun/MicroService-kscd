@@ -19,3 +19,13 @@ CountDownLatch和CyclicBarrier区别：
  1.countDownLatch是一个计数器，线程完成一个记录一个，计数器递减，只能只用一次
  2.CyclicBarrier的计数器更像一个阀门，需要所有线程都到达，然后继续执行，计数器递增，提供reset功能，可以多次使用
 ```
+
+5. Atomic
+
+6. ForkJoinPool
+
+7. ReentrantLock，读写锁
+
+8. Semaphore
+
+9. Synchronized
