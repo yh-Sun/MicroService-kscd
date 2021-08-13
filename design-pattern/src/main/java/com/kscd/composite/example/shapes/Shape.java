@@ -2,6 +2,9 @@ package com.kscd.composite.example.shapes;
 
 import java.awt.*;
 
+/**
+ * 通用形状接口
+ */
 public interface Shape {
     int getX();
     int getY();
