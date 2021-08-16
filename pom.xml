@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>${project.artifactId}</description>
-    
+
     <modules>
         <!--设计模式-->
         <module>design-pattern</module>
@@ -20,8 +20,10 @@
         <module>study-concurrent</module>
         <!--spring boot + mybatis plus + mongodb-->
         <module>spring-boot-mongodb</module>
+        <!--学习：数据结构与算法-->
+        <module>study-data-structure</module>
     </modules>
-    
+
     <properties>
         <kscd-util.version>1.0</kscd-util.version>
         <kscd-cloud.version>1.0</kscd-cloud.version>
@@ -29,7 +31,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -41,14 +43,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <dependencies>
         <!--Lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        
+
         <!--HuTool工具类-->
         <dependency>
             <groupId>cn.hutool</groupId>
