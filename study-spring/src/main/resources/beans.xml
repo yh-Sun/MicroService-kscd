@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="dao" class="com.sun.spring.study01.dao.impl.PayDaoImpl"></bean>
+
+    <bean id="service" class="com.sun.spring.study01.service.impl.PayServiceImpl"></bean>
+</beans>

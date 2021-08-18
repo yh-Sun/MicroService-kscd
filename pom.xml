@@ -22,6 +22,7 @@
         <module>spring-boot-mongodb</module>
         <!--学习：数据结构与算法-->
         <module>study-data-structure</module>
+        <module>study-spring</module>
     </modules>
 
     <properties>
