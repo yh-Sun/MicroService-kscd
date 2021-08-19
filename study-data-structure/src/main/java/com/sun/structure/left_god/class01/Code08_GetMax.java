@@ -1,4 +1,4 @@
-package com.sun.structure.left_god;
+package com.sun.structure.left_god.class01;
 
 /**
  * arr[L...R]范围求最大值
