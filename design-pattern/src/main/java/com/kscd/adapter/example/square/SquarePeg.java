@@ -7,6 +7,8 @@ package com.kscd.adapter.example.square;
  * RU: КвадратныеКолышки несовместимы с КруглымиОтверстиями (они остались в
  * проекте после бывших разработчиков). Но мы должны как-то интегрировать их в
  * нашу систему.
+ *
+ * 方钉
  */
 public class SquarePeg {
     private double width;

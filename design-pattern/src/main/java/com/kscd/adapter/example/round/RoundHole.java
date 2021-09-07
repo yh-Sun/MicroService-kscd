@@ -4,6 +4,8 @@ package com.kscd.adapter.example.round;
  * EN: RoundHoles are compatible with RoundPegs.
  *
  * RU: КруглоеОтверстие совместимо с КруглымиКолышками.
+ *
+ * 园孔
  */
 public class RoundHole {
     private double radius;
