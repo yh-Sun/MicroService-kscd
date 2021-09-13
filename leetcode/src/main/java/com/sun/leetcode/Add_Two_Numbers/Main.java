@@ -1,4 +1,4 @@
-package com.sun.leetcode.add_two_numbers;
+package com.sun.leetcode.Add_Two_Numbers;
 
 import cn.hutool.core.lang.Console;
 
@@ -38,5 +38,5 @@ public class Main {
         } while (n1.size != 0 || n2.size != 0);
         return result;
     }
-    
+
 }
