@@ -23,6 +23,7 @@
         <!--学习：数据结构与算法-->
         <module>study-data-structure</module>
         <module>study-spring</module>
+        <module>study-netty</module>
     </modules>
 
     <properties>
