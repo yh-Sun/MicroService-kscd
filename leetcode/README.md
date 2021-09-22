@@ -13,4 +13,9 @@ https://doocs.gitee.io/leetcode/
 3. 无重复字符的最长子串[Longest_Repeating_Characters]
 > 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
+4. 寻找两个正序数组的中位数[Median_of_Two_Sorted_Arrays]
+> 给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。
+
+5. 最长回文串[Longest_Palindromic_Substring]
+> 给你一个字符串 s，找到 s 中最长的回文子串。
 
