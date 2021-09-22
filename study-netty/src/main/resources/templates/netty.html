@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netty</title>
+    <script src="/js/jquery-2.2.0.js" type="application/javascript"></script>
+    <script src="/js/socket.io.js"></script>
+<!--    <script src="/js/socket.io.js.map"></script>-->
+    <script type="application/javascript">
+        $(function () {
+            var socket = io.connect('http://127.0.0.1:9100');
+            socket.on("netty", function (data) {
+                console.log(data);
+               $('#sun').text(data);
+            });
+        })
+    </script>
+</head>
+
+<body>
+    sun=<span id="sun"></span>
+</body>
+</html>
