@@ -1,23 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Netty</title>
-    <script src="/js/jquery-2.2.0.js" type="application/javascript"></script>
-    <script src="/js/socket.io.js"></script>
-<!--    <script src="/js/socket.io.js.map"></script>-->
-    <script type="application/javascript">
-        $(function () {
-            var socket = io.connect('http://127.0.0.1:9100');
-            socket.on("netty", function (data) {
-                console.log(data);
-               $('#sun').text(data);
-            });
-        })
-    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>websocket-java-socketio</title>
+    <script src="https://cdn.bootcss.com/socket.io/2.2.0/socket.io.js"></script>
 </head>
-
 <body>
-    sun=<span id="sun"></span>
+<h1>Socket.io Test</h1>
+<div><p id="broadcast">广播区域</p></div>
+<div><p id="status">等待连接</p></div>
+<div><p id="message">你好!</p></div>
+<button id="connect" onClick='connect()'/>Connect</button>
+<button id="disconnect" onClick='disconnect()'>Disconnect</button>
+<input type="text" id="input">
+<button id="send" onClick='send()'/>Send Message</button>
 </body>
+
+<script type="text/javascript">
+
+    /**
+     * 前端js的 socket.emit("事件名","参数数据")方法，是触发后端自定义消息事件的时候使用的,
+     * 前端js的 socket.on("事件名",匿名函数(服务器向客户端发送的数据))为监听服务器端的事件
+     **/
+    var socket;
+
+    //请求连接
+    function connect() {
+        if(socket!=null)return;
+        socket = io.connect("http://localhost:9094?id=123456")
+        //监听服务器连接事件
+        socket.on('connect', function(){ status_update("连接到服务器"); });
+        //监听服务器关闭服务事件
+        socket.on('disconnect', function(){ status_update("从服务器中断开"); });
+        //监听服务器端发送消息事件
+        socket.on('messageevent', function(data) {
+            message(data)
+        });
+        //监听服务器广播事件
+        socket.on('Broadcast', function(data) {
+            Broadcast(data)
+        });
+    }
+
+    //断开连接
+    function disconnect() {
+        socket.disconnect();
+        socket=null;
+    }
+
+    //显示服务器发来的消息
+    function message(data) {
+        document.getElementById('message').innerHTML = "Server says: " + data;
+    }
+    //显示当前状态
+    function status_update(txt){
+        document.getElementById('status').innerHTML = txt;
+    }
+    //显示服务器广播
+    function Broadcast(data) {
+        document.getElementById('broadcast').innerHTML = "广播: " + data;
+    }
+    //点击发送消息触发
+    function send() {
+        var msg = document.getElementById('input').value;
+        socket.emit('messageevent', {name: '小明', msg: msg});
+    };
+</script>
 </html>
